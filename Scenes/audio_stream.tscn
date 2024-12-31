@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwyryf3uxmltu"]
+
+[ext_resource type="AudioStream" uid="uid://dp7b3muv4t1ah" path="res://Assets/Misc/A Gloomy Day.wav" id="1_milc6"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_milc6")
+autoplay = true
+bus = &"Music"

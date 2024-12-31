@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwm71116v3ko3"]
+
+[ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_vi12u"]
+
+[node name="Title_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vi12u")
+
+[node name="Start_game" type="Button" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 159.0
+offset_right = 644.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 30
+text = "Start"
+
+[node name="Settings_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 414.0
+offset_right = 639.0
+offset_bottom = 474.0
+theme_override_font_sizes/font_size = 30
+text = "Settings
+"
+
+[node name="Settings_Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 535.0
+offset_right = 1068.0
+offset_bottom = 595.0
+theme_override_font_sizes/font_size = 30
+text = "Credits"
+
+[connection signal="pressed" from="Start_game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Settings_Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Settings_Button2" to="." method="_on_settings_button_2_pressed"]

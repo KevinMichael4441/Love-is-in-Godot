@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://h17jkfr8nsjh"]
+
+[ext_resource type="Script" path="res://Scripts/credit_screen.gd" id="1_g7dtv"]
+
+[node name="Credit_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g7dtv")
+
+[node name="Back_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 220.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://djcdkd104m0un"]
+
+[ext_resource type="Texture2D" uid="uid://wyw8kj2xkoyt" path="res://Assets/Level_1/Black_and_white_BG.jpg" id="1_3vyj7"]
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_b0g1u"]
+[ext_resource type="Texture2D" uid="uid://dj5gckwndtn1g" path="res://Assets/Level_1/Colourized_BG.jpg" id="2_n5x5e"]
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_b0g1u")
+
+[node name="Colour" type="Sprite2D" parent="."]
+position = Vector2(576, 257.5)
+scale = Vector2(0.6, 0.436811)
+texture = ExtResource("2_n5x5e")
+
+[node name="Black_and_white" type="Sprite2D" parent="."]
+position = Vector2(576, 257.5)
+scale = Vector2(0.6, 0.436811)
+texture = ExtResource("1_3vyj7")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Settings_Button" type="Button" parent="."]
+offset_left = 26.0
+offset_top = 552.0
+offset_right = 182.0
+offset_bottom = 612.0
+theme_override_font_sizes/font_size = 30
+text = "Settings
+"
+
+[node name="BerryinMiddle Polygon" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(565, 147, 576, 147, 582, 151, 586, 156, 585, 164, 579, 170, 572, 172, 562, 172, 555, 168, 552, 162, 552, 160, 550, 157, 551, 155, 554, 154, 558, 150)
+
+[node name="BerryInMiddle Area" type="Area2D" parent="BerryinMiddle Polygon"]
+
+[node name="BerryInMiddle Collision" type="CollisionPolygon2D" parent="BerryinMiddle Polygon/BerryInMiddle Area"]
+
+[connection signal="pressed" from="Settings_Button" to="." method="_on_settings_button_pressed"]
+[connection signal="input_event" from="BerryinMiddle Polygon/BerryInMiddle Area" to="." method="_on_berry_in_middle_area_input_event"]

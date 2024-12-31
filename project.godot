@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Love is in small things - Kevin's Edition"
+run/main_scene="res://Scenes/title_screen.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://Misc/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://Misc/default_bus_layout.tres"
+
+[autoload]
+
+GlobalAudioStream="*res://Scenes/audio_stream.tscn"
+AutoLoad="*res://Scripts/Auto_Load.gd"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
