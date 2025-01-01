@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://djcdkd104m0un"]
+[gd_scene load_steps=6 format=3 uid="uid://djcdkd104m0un"]
 
 [ext_resource type="Texture2D" uid="uid://wyw8kj2xkoyt" path="res://Assets/Level_1/Black_and_white_BG.jpg" id="1_3vyj7"]
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_b0g1u"]
+[ext_resource type="Texture2D" uid="uid://b14lhxfdh4c1b" path="res://Misc/Wooden Inventory.png" id="2_mmn48"]
 [ext_resource type="Texture2D" uid="uid://dj5gckwndtn1g" path="res://Assets/Level_1/Colourized_BG.jpg" id="2_n5x5e"]
+[ext_resource type="Theme" uid="uid://doy4bdctmbnmu" path="res://Misc/Buttons/Default_Theme.tres" id="4_lv3sk"]
 
 [node name="Level_1" type="Node2D"]
 script = ExtResource("1_b0g1u")
+
+[node name="WoodenInventory" type="Sprite2D" parent="."]
+position = Vector2(575.5, 581.5)
+scale = Vector2(32.0208, 4.46875)
+texture = ExtResource("2_mmn48")
 
 [node name="Colour" type="Sprite2D" parent="."]
 position = Vector2(576, 257.5)
@@ -20,11 +27,12 @@ texture = ExtResource("1_3vyj7")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Settings_Button" type="Button" parent="."]
-offset_left = 26.0
-offset_top = 552.0
-offset_right = 182.0
-offset_bottom = 612.0
-theme_override_font_sizes/font_size = 30
+offset_left = 22.0
+offset_top = 28.0
+offset_right = 178.0
+offset_bottom = 88.0
+theme = ExtResource("4_lv3sk")
+theme_override_font_sizes/font_size = 25
 text = "Settings
 "
 

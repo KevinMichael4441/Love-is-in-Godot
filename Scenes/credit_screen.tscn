@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://h17jkfr8nsjh"]
+[gd_scene load_steps=3 format=3 uid="uid://h17jkfr8nsjh"]
 
 [ext_resource type="Script" path="res://Scripts/credit_screen.gd" id="1_g7dtv"]
+[ext_resource type="Theme" uid="uid://doy4bdctmbnmu" path="res://Misc/Buttons/Default_Theme.tres" id="2_o12kb"]
 
 [node name="Credit_screen" type="Control"]
 layout_mode = 3
@@ -17,6 +18,7 @@ offset_left = 60.0
 offset_top = 60.0
 offset_right = 220.0
 offset_bottom = 120.0
+theme = ExtResource("2_o12kb")
 theme_override_font_sizes/font_size = 30
 text = "Back"
 

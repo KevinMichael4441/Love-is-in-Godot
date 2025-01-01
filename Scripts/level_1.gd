@@ -10,9 +10,6 @@ func _on_settings_button_pressed() -> void:
 	pass # Replace with function body.
 
 
-func _ready() -> void:
-	CollisionPolygon2D.polygon = Polygon2D.polygon
-
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
