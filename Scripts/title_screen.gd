@@ -11,6 +11,6 @@ func _on_settings_button_pressed() -> void:
 	pass # Replace with function body.
 
 
-func _on_settings_button_2_pressed() -> void:
+func _on_credits_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/credit_screen.tscn")
 	pass # Replace with function body.

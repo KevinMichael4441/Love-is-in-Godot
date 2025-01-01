@@ -39,7 +39,7 @@ theme_override_font_sizes/font_size = 30
 text = "Settings
 "
 
-[node name="Settings_Button2" type="Button" parent="."]
+[node name="Credits_Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 912.0
 offset_top = 535.0
@@ -51,4 +51,4 @@ text = "Credits"
 
 [connection signal="pressed" from="Start_game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="Settings_Button" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Settings_Button2" to="." method="_on_settings_button_2_pressed"]
+[connection signal="pressed" from="Credits_Button" to="." method="_on_credits_button_pressed"]

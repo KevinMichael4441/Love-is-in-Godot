@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dweydekrh6jh7"]
+[gd_scene load_steps=8 format=3 uid="uid://dweydekrh6jh7"]
 
 [ext_resource type="Texture2D" uid="uid://bjxbfv31b8qi7" path="res://Assets/Settings/clipart272842.png" id="1_lqt3o"]
 [ext_resource type="Script" path="res://Scripts/settings_screen.gd" id="1_olr18"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://v8qpcly8lo5d" path="res://Assets/Settings/clipart1135307.png" id="3_w441v"]
 [ext_resource type="Theme" uid="uid://doy4bdctmbnmu" path="res://Misc/Buttons/Default_Theme.tres" id="5_8isv4"]
 [ext_resource type="PackedScene" uid="uid://b54ceb0kfqqmn" path="res://Scenes/Music_volume_slider.tscn" id="5_eloid"]
+[ext_resource type="Theme" uid="uid://deig2yw013bqf" path="res://Misc/Buttons/slider_theme.tres" id="7_11jpq"]
 
 [node name="Settings_Screen" type="Control"]
 layout_mode = 3
@@ -54,41 +55,43 @@ text = "Back"
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 50.0
-offset_top = 205.0
-offset_right = 300.0
+offset_top = 185.0
+offset_right = 375.0
 offset_bottom = 404.0
 alignment = 1
 
 [node name="Master_Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"HeaderMedium"
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0, 0.584314, 0.913725, 1)
 text = "Master Volume
 "
 
 [node name="Master" parent="VBoxContainer" instance=ExtResource("5_eloid")]
 layout_mode = 2
-theme = ExtResource("5_8isv4")
+theme = ExtResource("7_11jpq")
 bus_name = "Master"
 
 [node name="Music_Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"HeaderMedium"
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0, 0.584314, 0.913725, 1)
 text = "Music"
 
 [node name="SFX" parent="VBoxContainer" instance=ExtResource("5_eloid")]
 layout_mode = 2
+theme = ExtResource("7_11jpq")
 bus_name = "Music"
 
 [node name="SFX_Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_type_variation = &"HeaderMedium"
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0, 0.584314, 0.913725, 1)
 text = "SFX"
 
 [node name="Music" parent="VBoxContainer" instance=ExtResource("5_eloid")]
 layout_mode = 2
+theme = ExtResource("7_11jpq")
 bus_name = "SFX"
 
 [connection signal="pressed" from="Home_Button" to="." method="_on_home_button_pressed"]
